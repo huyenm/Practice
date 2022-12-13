@@ -10,7 +10,7 @@ const topicLists = [{
 }]
 
 
-function topicValidate(item) {
+function validator(item) {
   if (item.topic === "A" && 10 <= item.description.length <= 100) {
     return item.name === "a";
   } else if (item.topic === "B" && item.description.length <= 40) {
@@ -20,8 +20,8 @@ function topicValidate(item) {
   return true;
 }
 
-for (let i =0; i<= topicLists.length; i++){
-        topicValidate(topicLists[i]);
+for (let i =0; i <= topicLists.length; i++){
+        validator(topicLists[i]);
 }
 
 
