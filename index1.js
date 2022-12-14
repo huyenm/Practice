@@ -1,6 +1,6 @@
 var dict = [
     {'topic': 'A', 'name': 'a', 'descriptionLength': [10,100]},
-    {'topic': 'B', 'name': 'x', 'descriptionLength': [0,40]}
+    {'topic': 'B', 'name': 'b', 'descriptionLength': [0,40]}
 ]
 
 var currentObj = {
@@ -9,6 +9,7 @@ var currentObj = {
     'description': 'somethingggggg'
 }
 
+// validator check
 function validator(obj){
     var correctName;
     var correctDesLengthArr;
@@ -18,6 +19,8 @@ function validator(obj){
             correctDesLengthArr = dict[i]['descriptionLength'];
         }
     }
+
+    // . toString used with a number & convert number to a string
     if (obj.name = correctName
         && obj.description.toString().length > correctDesLengthArr[0]
         && obj.description.toString().length < correctDesLengthArr[1]){
